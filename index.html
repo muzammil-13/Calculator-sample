@@ -1,65 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS linking -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets\bootstrap.min.css">
-
-    <title> Project: Calculator</title>
+    <title>Responsive JavaScript Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<!--Linking custom CSS & JS files -->
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 <body>
-    <h1>Calculator</h1>
-
-    <div class="main-body">
-
-        <div class="calc">
-
-            <div class="output">
-                <input type="text" id="screen">
-
-            </div>
-            <div class="buttons">
-                <div class="row">
-                    <button onCLick="clearDisplay()" class="btn">C</button>
-                </div>
-
-                <div class="row">
-                    <button onClick="buttonClick(7)" class="btn">7</button>
-                    <button onClick="buttonClick(8)" class="btn">8</button>
-                    <button onClick="buttonClick(9)" class="btn">9</button>
-                    <button onClick="buttonClick('/')" class="btn">/</button>
-                </div>
-                <div class="row">
-                    <button onClick="buttonClick(4)" class="btn">4</button>
-                    <button onClick="buttonClick(5)" class="btn">5</button>
-                    <button onClick="buttonClick(6)" class="btn">6</button>
-                    <button onClick="buttonClick('*')" class="btn">X</button>
-                </div>
-                <div class="row">
-                    <button onClick="buttonClick(1)" class="btn">1</button>
-                    <button onClick="buttonClick(2)" class="btn">2</button>
-                    <button onClick="buttonClick(3)" class="btn">3</button>
-                    <button onClick="buttonClick('-')" class="btn">-</button>
-                </div>
-                <div class="row">
-                    <button onClick="buttonClick('.')" class="btn">.</button>
-                    <button onClick="buttonClick(0)" class="btn">0</button>
-                    <button onClick="buttonClick('+')" class="btn">+</button>
-                    <button onClick="equalClick()" class="btn">=</button>
-                </div>
-
-            </div>
+    <!-- ==== Container ==== -->
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="display" readonly>
         </div>
-    </div>
-    <!-- JS file linkig -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="assets/bootstrap.bundle.min.js"></script>
+        <div class="buttons">
+            <button class="operator" onclick="appendOperator('+')">+</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+            <button class="operator" onclick="appendOperator('*')">*</button>
+            <button class="operator" onclick="appendOperator('/')">/</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="calculate()">=</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendNumber('C')">C</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('00')">00</button>
+            <button onclick="appendNumber('%')">%</button>
+        
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
