@@ -1,0 +1,98 @@
+/* ROBOTO FONT */  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ===== Color Variables */
+:root{
+    --bg-color: linear-gradient(to bottom right,#EEEEEE, #E0E3EB);
+    --white-color: #FFFFFF;
+    --black-color: #000E1A;
+    --orange-color: #FFA500;
+    --medium-dark: #333333;
+    --light-gray: #CCCCCC;
+  
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+ }
+ 
+/* ====== Body ====== */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--white-color);
+}
+
+
+/* ====== Container ====== */
+.calculator {
+    background-color: var(--black-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== display container ====== */
+.display {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+/* ====== History Box ====== */
+.display input {
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    text-align: right;
+    background-color: transparent;
+}
+
+/* ====== Display Box ====== */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* ====== Buttons ====== */
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color:var(--medium-dark);
+}
+
+.operator {
+    background-color: var(--orange-color);
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: var(--medium-dark);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+}
